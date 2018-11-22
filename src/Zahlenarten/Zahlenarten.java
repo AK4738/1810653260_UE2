@@ -16,11 +16,25 @@ public static void main(String[] args){
 
     System.out.println("" + zufallszahl);
 
-    if (zufallszahl %2==0){
+ /*   if (zufallszahl %2==0){
         JOptionPane.showMessageDialog(null, "Die Zahl ist gerade");
     }
     else{
         JOptionPane.showInputDialog(null, "Die Zahl ist ungerade");
     }
+    */
+    //String zahl = JOptionPane.showInputDialog("Geben Sie eine Zahl zwischen 1 und 10 ein");// Mit string kann man nicht rechnen bzw. vergleihen
+    int zahl = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie eine Zahl zw. 1 und 10 ein"));
+
+    if (zahl == zufallszahl) {
+        JOptionPane.showMessageDialog(null, "Die zahlen sind gleich");
+    }
+    else if (zufallszahl - zahl > -2 && zufallszahl - zahl < 2){
+        JOptionPane.showMessageDialog(null, "Sie waren nah dran");
+    }
+    else{
+        JOptionPane.showMessageDialog(null, "Die zahlen sind nicht gleich");
+    }
+
 }
 }
