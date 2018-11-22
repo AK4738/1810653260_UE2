@@ -26,14 +26,40 @@ public static void main(String[] args){
     //String zahl = JOptionPane.showInputDialog("Geben Sie eine Zahl zwischen 1 und 10 ein");// Mit string kann man nicht rechnen bzw. vergleihen
     int zahl = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie eine Zahl zw. 1 und 10 ein"));
 
+
     if (zahl == zufallszahl) {
         JOptionPane.showMessageDialog(null, "Die zahlen sind gleich");
     }
-    else if (zufallszahl - zahl > -2 && zufallszahl - zahl < 2){
+    else if (zufallszahl - zahl >= -2 && zufallszahl - zahl <= 2) {
         JOptionPane.showMessageDialog(null, "Sie waren nah dran");
+        for (int i = 0; i < 3; i++) {
+            int zahl2 = Integer.parseInt(JOptionPane.showInputDialog("Versuchen Sie es nochmal"));
+
+            if (zahl2 == zufallszahl) {
+                JOptionPane.showMessageDialog(null, "Die zahlen sind gleich");
+                i=3;
+            } else if (zufallszahl - zahl2 > -2 && zufallszahl - zahl2 < 2) {
+                JOptionPane.showMessageDialog(null, "Sie waren nah dran");
+            } else {
+                JOptionPane.showMessageDialog(null, "Die zahlen sind nicht gleich");
+            }
+        }
     }
     else{
         JOptionPane.showMessageDialog(null, "Die zahlen sind nicht gleich");
+        for (int h = 0; h < 3; h++) {
+            int zahl3 = Integer.parseInt(JOptionPane.showInputDialog("Versuchen Sie es nochmal"));
+
+            if (zahl3 == zufallszahl) {
+                JOptionPane.showMessageDialog(null, "Die zahlen sind gleich");
+                h=3;
+            } else if (zufallszahl - zahl3 > -2 && zufallszahl - zahl3 < 2) {
+                JOptionPane.showMessageDialog(null, "Sie waren nah dran");
+            } else {
+                JOptionPane.showMessageDialog(null, "Die zahlen sind nicht gleich");
+
+            }
+        }
     }
 
 }
